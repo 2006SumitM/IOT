@@ -1,0 +1,109 @@
+***LCD***
+
+step 1 : do connections
+
+gnd = 6
+vcc = 2
+sda = 3
+scl = 5
+
+
+step 2 :
+
+1. sudo raspi-config           click > interface options > I2C > yes > ok > finish
+2. sudo apt-get install -y i2c-tools
+3. sudo i2cdetect -y 1
+4. pip3 install RPLCD smbus2 --break-system-packages
+
+
+step 3 :
+
+run code 
+
+
+
+
+
+
+
+
+
+
+***Telegram***
+
+step 1 : do connections
+
+led 1 = 23
+led 2 = 13
+led 3 = 15
+gnd = 6
+
+if already generated previous token the -->  ( /revoke )
+
+step 2 : telegram > botfather > /start > /newbot > enter name > set username > token number will be generated
+
+to go into your account > click > username
+
+
+step 3 : install libraries ->
+
+1. pip3 install python-telegram-bot
+2. pip3 install python-telegram-bot --break-system-packages
+3. pip3 install gpiozero
+4. pip3 install gpiozero --break-system-packages
+
+
+step 4 : update new token id in program and run
+
+
+
+
+
+
+
+
+
+
+
+
+***RFID***
+
+step 1 : do connection 
+
+gnd = 6
+vcc = 1
+sda = 3
+scl = 5
+
+led = 11
+gnd led = 9
+
+
+step 2 :
+1. sudo apt update
+2. sudo apt install -y python3-pip python3-venvi2c-tools libgpiod-dev python3-libgpiod
+3. sudo raspi-config
+	interface option > i2c > yes > ok > finish
+4. sudo reboot
+3. ls /dev/i2c*
+4. i2cdetect -y 1
+5. pip3 install adafruit-blinka adafruit-circuitpython-pn532 --break-system-packages
+
+step 3 :
+run both the codes
+
+
+** 7segment **
+
+step 1 : do connection
+
+clk = 16
+dio = 18
+vcc = 4
+gnd = 14
+
+step 2 :
+run codes
+
+
+
